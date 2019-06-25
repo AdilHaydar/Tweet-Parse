@@ -1,0 +1,18 @@
+{% block body %}
+{% include "layout.html" %}
+<h3 align="center">Tweet Parse</h3>
+<hr>
+{% from "includes/formhelpers.html" import render_field %}
+<div class="container" align="center"> 
+    <form method="POST">
+    <dl>
+        <dt>Twitter Username: <dd>{{ form.Username(cols="20", rows="1") }}
+        <dt>Twitter Password: <dd>{{ form.Password(cols="20", rows="1") }}
+        <dt>Tweet: <dd>{{ form.Post(cols="70", rows="10") }}
+   </dl>
+        <button type="submit" class="btn btn-primary">Tweet!</button>
+    </form>
+    {% include "includes/messages.html" %}
+</div>
+
+{% endblock body %}
